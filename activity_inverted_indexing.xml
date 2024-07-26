@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text here"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:gravity="top|start"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:id="@+id/process_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Process"
+        android:layout_below="@id/input_text"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/inverted_index_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inverted Index"
+        android:textSize="16sp"
+        android:layout_below="@id/process_button"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

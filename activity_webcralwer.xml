@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/urlEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter URL"
+        android:inputType="textUri"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/crawlButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crawl"
+        android:layout_below="@id/urlEditText"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/crawlButton"
+        android:layout_margin="16dp"
+        android:text="Results will appear here"
+        android:textSize="16sp"/>
+</RelativeLayout>

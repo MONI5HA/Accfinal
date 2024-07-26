@@ -1,0 +1,220 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/background_light">
+
+        <!-- Gym Slogan TextView -->
+        <TextView
+            android:id="@+id/gym_slogan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="#131212"
+            android:text="Find Your Fitness Journey with Us!"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center"/>
+
+        <!-- Main Banner Image -->
+        <ImageView
+            android:id="@+id/banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/images"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Search Bar -->
+        <AutoCompleteTextView
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Search for a word"
+            android:imeOptions="actionSearch"
+            android:padding="12dp"
+            android:background="@drawable/search_bar_background"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Frequency Count Label -->
+        <TextView
+            android:id="@+id/frequency_count_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="#131212"
+            android:text="Frequency Count of this word"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"/>
+
+        <!-- Frequency Count TextView -->
+        <TextView
+            android:id="@+id/frequency_count_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="@drawable/text_view_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"/>
+
+        <!-- Search Frequency Label -->
+        <TextView
+            android:id="@+id/search_frequency_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="#131212"
+            android:text="Search Frequency"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"/>
+
+        <!-- Search Frequency TextView -->
+        <TextView
+            android:id="@+id/search_frequency_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="@drawable/text_view_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"/>
+
+        <!-- Suggestions TextView -->
+        <TextView
+            android:id="@+id/suggestions_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="12dp"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"/>
+
+        <!-- RecyclerView for Word Completion Suggestions -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/completion_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Label for Top Gyms Grid Layout -->
+        <TextView
+            android:id="@+id/top_gyms_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:background="#131212"
+            android:text="Top Gyms in Canada"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"/>
+
+        <!-- RecyclerView for Gyms -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:layout_marginBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"/>
+
+        <Button
+            android:id="@+id/parse_locations_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parse Locations"
+            android:layout_marginTop="16dp"/>
+
+
+
+        <!-- Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Page Ranking Button -->
+            <Button
+                android:id="@+id/page_ranking_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Page Ranking"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+
+            <!-- Inverted Index Button -->
+            <Button
+                android:id="@+id/inverted_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Inverted Index"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+
+            <!-- Web Crawler Button -->
+            <Button
+                android:id="@+id/webcrawler_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Web Crawler"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+
+            <!-- Extract Data Button -->
+            <Button
+                android:id="@+id/extract_data_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Extract Data"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:textColor="@android:color/white"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
